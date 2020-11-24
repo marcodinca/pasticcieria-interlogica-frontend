@@ -10,4 +10,4 @@ Questo progetto è stato creato usando [Angular CLI](https://github.com/angular/
 
 3a. Se si desidera avviare l'applicazione utilizzando Angular serve, avviare il server angular con il comando 'ng serve' nella cartella del progetto (richiede Angular CLI v11.0.2), dopodichè navigare all'url localhost:4200
 
-3b. Se si desidera pubblicare l'applicazione per poi accederci tramite un webserver, eseguire il comando 'ng build' nalla cartella del progetto (richiede Angular CLI v11.0.2), la build verrà creata nella cartella ./dist/interlogica-frontend/
+3b. Se si desidera pubblicare l'applicazione per poi accedervi tramite un webserver, eseguire il comando 'ng build' nella cartella del progetto (richiede Angular CLI v11.0.2), la build verrà creata nella cartella ./dist/interlogica-frontend/
