@@ -12,6 +12,17 @@ module.exports = __webpack_require__(/*! C:\Users\Marco\Desktop\Angular\test\src
 
 /***/ }),
 
+/***/ "25C3":
+/*!********************************!*\
+  !*** ./src/assets/config.json ***!
+  \********************************/
+/*! exports provided: serverUrl, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"serverUrl\":\"https://localhost:44380/api/\"}");
+
+/***/ }),
+
 /***/ "6Cq0":
 /*!***************************************!*\
   !*** ./src/services/login.service.ts ***!
@@ -23,8 +34,8 @@ module.exports = __webpack_require__(/*! C:\Users\Marco\Desktop\Angular\test\src
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginService", function() { return LoginService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var _config_config_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../config/config.json */ "iW3h");
-var _config_config_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../config/config.json */ "iW3h", 1);
+/* harmony import */ var _assets_config_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/config.json */ "25C3");
+var _assets_config_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../assets/config.json */ "25C3", 1);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "tk/3");
 
 // @ts-ignore
@@ -36,7 +47,7 @@ class LoginService {
         this.httpClient = httpClient;
     }
     login(data) {
-        return this.httpClient.post(`${_config_config_json__WEBPACK_IMPORTED_MODULE_1__.serverUrl}Login`, data);
+        return this.httpClient.post(`${_assets_config_json__WEBPACK_IMPORTED_MODULE_1__.serverUrl}Login`, data);
     }
 }
 LoginService.ɵfac = function LoginService_Factory(t) { return new (t || LoginService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"])); };
@@ -637,8 +648,8 @@ ProdottiComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefine
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProductService", function() { return ProductService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var _config_config_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../config/config.json */ "iW3h");
-var _config_config_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../config/config.json */ "iW3h", 1);
+/* harmony import */ var _assets_config_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/config.json */ "25C3");
+var _assets_config_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../assets/config.json */ "25C3", 1);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "tk/3");
 
 // @ts-ignore
@@ -650,28 +661,28 @@ class ProductService {
         this.httpClient = httpClient;
     }
     getProdotti() {
-        return this.httpClient.get(`${_config_config_json__WEBPACK_IMPORTED_MODULE_1__.serverUrl}Prodotti`);
+        return this.httpClient.get(`${_assets_config_json__WEBPACK_IMPORTED_MODULE_1__.serverUrl}Prodotti`);
     }
     putProdotto(prodotto) {
-        return this.httpClient.put(`${_config_config_json__WEBPACK_IMPORTED_MODULE_1__.serverUrl}Prodotti`, prodotto);
+        return this.httpClient.put(`${_assets_config_json__WEBPACK_IMPORTED_MODULE_1__.serverUrl}Prodotti`, prodotto);
     }
     postProdotto(prodotto) {
-        return this.httpClient.post(`${_config_config_json__WEBPACK_IMPORTED_MODULE_1__.serverUrl}Prodotti`, prodotto);
+        return this.httpClient.post(`${_assets_config_json__WEBPACK_IMPORTED_MODULE_1__.serverUrl}Prodotti`, prodotto);
     }
     deleteProdotto(id) {
-        return this.httpClient.delete(`${_config_config_json__WEBPACK_IMPORTED_MODULE_1__.serverUrl}Prodotti/${id}`);
+        return this.httpClient.delete(`${_assets_config_json__WEBPACK_IMPORTED_MODULE_1__.serverUrl}Prodotti/${id}`);
     }
     getIngredienti() {
-        return this.httpClient.get(`${_config_config_json__WEBPACK_IMPORTED_MODULE_1__.serverUrl}Ingredienti`);
+        return this.httpClient.get(`${_assets_config_json__WEBPACK_IMPORTED_MODULE_1__.serverUrl}Ingredienti`);
     }
     putIngrediente(ingrediente) {
-        return this.httpClient.put(`${_config_config_json__WEBPACK_IMPORTED_MODULE_1__.serverUrl}Ingredienti`, ingrediente);
+        return this.httpClient.put(`${_assets_config_json__WEBPACK_IMPORTED_MODULE_1__.serverUrl}Ingredienti`, ingrediente);
     }
     postIngrediente(ingrediente) {
-        return this.httpClient.post(`${_config_config_json__WEBPACK_IMPORTED_MODULE_1__.serverUrl}Ingredienti`, ingrediente);
+        return this.httpClient.post(`${_assets_config_json__WEBPACK_IMPORTED_MODULE_1__.serverUrl}Ingredienti`, ingrediente);
     }
     deleteIngrediente(id) {
-        return this.httpClient.delete(`${_config_config_json__WEBPACK_IMPORTED_MODULE_1__.serverUrl}Ingredienti/${id}`);
+        return this.httpClient.delete(`${_assets_config_json__WEBPACK_IMPORTED_MODULE_1__.serverUrl}Ingredienti/${id}`);
     }
 }
 ProductService.ɵfac = function ProductService_Factory(t) { return new (t || ProductService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"])); };
@@ -1164,17 +1175,6 @@ AreaPrivataComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdef
             }]
     }], function () { return []; }, null); })();
 
-
-/***/ }),
-
-/***/ "iW3h":
-/*!********************************!*\
-  !*** ./src/config/config.json ***!
-  \********************************/
-/*! exports provided: serverUrl, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"serverUrl\":\"https://localhost:44380/api/\"}");
 
 /***/ }),
 

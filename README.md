@@ -1,27 +1,24 @@
-# Test
+# Progetto pasticcieria interlogica - frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
+Questo progetto è stato creato usando [Angular CLI](https://github.com/angular/angular-cli) versione 11.0.2.
 
-## Development server
+## Come installare - wwwroot
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Compreso nel repository è una build del progetto, situata nella cartella dist/interlogica-frontend/
+Piazzare i contenuti della cartella interlogica-frontend nel wwwroot del server, poi navigare all'url '[serverUrl]/index.html'
 
-## Code scaffolding
+## Come eseguire usando Angular cli
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Installare i pacchetti node usando il comando 'npm install' nella cartella del progetto (richiede node CLI).
 
-## Build
+2. Avviare il server angular con il comando 'ng serve' nella cartella del progetto (richiede Angular CLI v11.0.2)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+3. Navigare all'url http://localhost:4200 (di default)
 
-## Running unit tests
+Se si desidera buildare la propria versione del progetto, utilizzare il comando 'ng build' nella cartella del progetto
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Come configurare la connessione al Back-end
 
-## Running end-to-end tests
+Nella cartella 'assets' della build è presente il file 'config.json', basta modifcare il suo contenuto con l'indirizzo del server desiderato.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Nota: è necessario avere la dicitura /api/ all fine della path, in questo modo: https://[serverIp/serverUrl]:[porta]/[istanza]/api/

@@ -3,7 +3,7 @@ import { Prodotto } from '../models/Prodotto';
 import { Observable } from 'rxjs';
 import { Ingrediente } from '../models/Ingrediente';
 // @ts-ignore
-import config from '../config/config.json';
+import config from '../assets/config.json';
 
 import { HttpClient } from '@angular/common/http';
 
