@@ -1,0 +1,47 @@
+<div class="row">
+  <div class="col">
+    <h5>Ingredienti</h5>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <table class="table">
+      <thead>
+        <th style="width:30%" >Nome</th>
+        <th style="width:30%">Unità di misura</th>
+        <th style="width:40%"><a class="abutton" (click)="newIngredient()">Aggiungi</a></th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let i of ingredienti">
+          <td>
+            <input type="text" value="{{i.nome}}"
+                   [disabled]="mode != 'EDIT' || editableId != i.id"
+                    (change)="updateNome(i.id, $event)">
+          </td>
+          <td>
+            <input type="text" value="{{i.um}}"
+                   [disabled]="mode != 'EDIT' || editableId != i.id"
+                   (change)="updateUm(i.id, $event)">
+          </td>
+          <td>
+            <a class="abutton" (click)="enableEditIngredient(i)" *ngIf="mode != 'EDIT' || editableId != i.id">Modifica</a>
+            <a class="abutton" (click)="editIngredient(i)" *ngIf="mode == 'EDIT' && editableId == i.id">Salva</a>
+            <a class="abutton" style="margin-left: 1ch;" (click)="deleteIngredient(i.id)">Elimina</a>
+          </td>
+        </tr>
+        <tr *ngIf="mode=='NEW'">
+          <td>
+            <input type="text" #newIngredientName placeholder="Nome" >
+          </td>
+          <td>
+            <input type="text" #newIngredientUm placeholder="Unità di misura" >
+          </td>
+          <td>
+            <a class="abutton" (click)="saveIngrediente()">Salva</a>
+            <a class="abutton" style="margin-left: 1ch;" (click)="mode = 'VIEW'">Rimuovi</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

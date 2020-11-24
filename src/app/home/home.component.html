@@ -1,0 +1,61 @@
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Dettagli Prodotto</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+      <div class="col col-5" >
+        <img src="{{prodottoSelezionato.immagine}}" style="width: 100%;">
+      </div>
+      <div class="col">
+        <p>
+          {{prodottoSelezionato.descrizione}}
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <h5>Ingredienti:</h5>
+        <ul>
+          <li *ngFor="let i of prodottoSelezionato.ingredienti">
+            {{i.nome}} - {{i.quantita}}({{i.um}})
+          </li>
+        </ul>
+      </div>
+      <div class="col">
+        <h3>{{prodottoSelezionato.prezzoAttuale}}€</h3>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<div class="container">
+  <div class="row">
+    <div class="col col-md-3" *ngFor="let p of prodotti">
+      <div class="card">
+        <img class="card-img-top" src="{{p.immagine}}" alt="Immagine">
+        <div class="card-body">
+          <h5 class="card-title">{{p.nome}}</h5>
+          <p class="card-text">{{p.descrizione}}</p>
+          <div class="row">
+            <div class="col"  *ngIf="p.sconto == 0">
+              {{p.prezzo}}€
+            </div>
+            <div class="col" *ngIf="p.sconto > 0">
+              <span class="prezzoPieno">{{p.prezzo}}€</span>
+              <br>
+              <span class="prezzoScontato">{{p.prezzoAttuale}}€</span>
+            </div>
+            <div class="col">
+              <a (click)="viewDetails(p, content)" class="btn btn-primary">Dettagli</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

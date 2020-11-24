@@ -1,0 +1,23 @@
+.card-img-top {
+  height: 40vh
+}
+
+.card-text {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  height: 2rem;
+  max-height: 2rem;
+}
+
+.prezzoPieno {
+  text-decoration: line-through;
+}
+
+.prezzoScontato {
+  font-weight: bold;
+  color: red;
+}
+
